@@ -10,7 +10,12 @@ node {
   stage ('clean after build'){
       cleanWs()
   }
-  
+  stage (' message'){
+  echo 'your job is done| thanks for choosing jenkins'
+  }
+ 
+
+
 }
   
   
