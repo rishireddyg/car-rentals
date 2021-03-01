@@ -4,19 +4,19 @@ node {
     }
   stage ('mvn_build'){
   def mvnHome= tool name: 'maven3', type: 'maven'
-  sh "${mvnHome}/bin/make"
+  sh "${mvnHome}/bin/mvn build"
   }
    stage ('mvn_test'){
   def mvnHome= tool name: 'maven3', type: 'maven'
-  sh "${mvnHome}/bin/make check"
+  sh "${mvnHome}/bin/mvn test"
   }
   stage ('mvn_compile'){
   def mvnHome= tool name: 'maven3', type: 'maven'
-  sh "${mvnHome}/bin/compile"
+  sh "${mvnHome}/bin/mvn compile"
   }
   stage ('mvn_deploy'){
   def mvnHome= tool name: 'maven3', type: 'maven'
-  sh "${mvnHome}/bin/make publish"
+  sh "${mvnHome}/bin/mvn deploy"
   }
 }
   
