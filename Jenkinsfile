@@ -23,10 +23,7 @@ node {
   stage (' check file exist'){
   fileExists 'Jenkinsfile'
   }
-  stage (' read jenkins file'){
-  readFile 'Jenkinsfile'
-  }
-
+  
 }
   
   
