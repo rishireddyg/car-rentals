@@ -14,7 +14,9 @@ node {
   echo 'your job is done| thanks for choosing jenkins'
   }
  
-
+  stage ('error message'){
+  error 'dont do this again'
+  }
 
 }
   
