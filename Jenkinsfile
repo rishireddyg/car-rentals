@@ -15,7 +15,7 @@ node {
   }
  
   stage ('error message'){
-  error 'dont do this again'
+
   }
 
 }
