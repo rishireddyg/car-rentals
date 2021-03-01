@@ -15,7 +15,7 @@ node {
   }
  
   stage ('error message'){
-
+  input 'yes'	
   }
 
   stage (' check file exist'){
