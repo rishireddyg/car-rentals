@@ -18,6 +18,10 @@ node {
 
   }
 
+  stage (' check file exist'){
+  fileExists 'Jenkinsfile'
+  }
+
 }
   
   
