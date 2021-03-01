@@ -7,7 +7,10 @@ node {
   def mvnHome= tool name: 'maven3', type: 'maven'
   sh "${mvnHome}/bin/mvn package"
   }
-  cleanWs()
+  stage ('clean after build'){
+      cleanWs()
+  }
+  
 }
   
   
