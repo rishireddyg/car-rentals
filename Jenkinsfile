@@ -7,6 +7,8 @@ node {
   def mvnHome= tool name: 'maven3', type: 'maven'
   sh "${mvnHome}/bin/mvn package"
   }
+    input 'yes'
+
   stage ('clean after build'){
       cleanWs()
   }
@@ -15,11 +17,14 @@ node {
   }
  
   stage ('error message'){
-  input 'yes'	
+
   }
 
   stage (' check file exist'){
   fileExists 'Jenkinsfile'
+  }
+  stage (' read jenkins file'){
+  readFile 'Jenkinsfile'
   }
 
 }
